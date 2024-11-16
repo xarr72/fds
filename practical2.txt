@@ -1,0 +1,82 @@
+#Practical 2
+#Press Ctrl+F and search for your code.
+#Save your code as .py file after copying.
+#Run with this command: python yahanfilekanaam.py
+
+#Creating a dataframe, 
+
+import pandas as pd 
+stud_data=[(1,'abc',20,'male','IT','mumbai'),
+		(2,'xyz',21,'female','CS','pune'), 
+           		(3,'aaa',19,'male','DS','mumbai'),
+				(4,'bbb',22,'female','Ds',"nagpur"),
+					(5,'ccc',20,'female','Ds',"surat")] 
+stud_df=pd.DataFrame(stud_data, columns=['Roll NO.','Name','Age','Gender','Course','City']) 
+print(stud_df) 
+
+#Print the top 2 records. 
+print("Top 2 records: ") print(stud_df.head(2))
+
+#Print the last 2 records. 
+print("Last 2 records: ") 
+print(stud_df.tail(2)) 
+
+#Print the dimensions of the dataframe. 
+print("The dimensions of student dataframe are : ",stud_df.shape) 
+
+#Print the size of the dataframe. 
+print("THe size of the dataframe is",stud_df.size)
+
+#Print the data types of the columns. 
+print("The data types of the columns are: ", stud_df.dtypes) 
+
+#List all the values in the dataframe. 
+print("The values of the data are:",stud_df.values) 
+
+#Print the range index. 
+print("The index is ",stud_df.index) 
+
+#Find a particular row’s value. 
+print("The value of the first row is: ",stud_df.loc[0]) 
+print() 
+print("The value of the first and second row is: ",stud_df.loc[[0,1]]) 
+
+#Add a new column. 
+print("adding a new column:") 
+stud_df["Contact info"]=[111,222,3333,44444,55555] 
+print(stud_df) 
+
+#Add/insert a column in a particular index. 
+print("adding a column after a particular position/index") 
+stud_df.insert((5), 
+"State",['Maharashtra','Maharashtra','Maharas htra','Gujurat','Maharashtra']) 
+print(stud_df) 
+
+Add a new row. 
+ 
+print("Adding a new row") stud_df.loc[2]=[22,'dfd',35,'Male','DS','mumbai',
+234232] print(stud_df) 
+
+#Delete a column. 
+print("After deleting the 'State' column") 
+del stud_df['State'] 
+print(stud_df) 
+##ANother way to delete a column 
+“””print("After deleting the 'Contact info' column") 
+dff=stud_df.drop(columns=['Contact info']) 
+print(dff)””” 
+
+#Delete a row. 
+ 
+print("deleting second row") 
+df=stud_df.drop(1) print(df)
+
+#Rename a column, 
+print("Renaming Contact info") 
+df=stud_df.rename(columns={'Contact info':'Moblie number'}) 
+print(df)
+
+#Change a particular value in a dataset. 
+ 
+print("Changing a particular value") stud_df.loc[2,'Age']=[81] print(stud_df) 
+

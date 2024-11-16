@@ -1,0 +1,27 @@
+import matplotlib.pyplot as pt
+
+# Assigning values to x and y for the second plot
+x = [1, 2, 3, 4, 6, 7, 9]
+y = [6, 8, 4, 2, 7, 0, 9]
+
+# Plotting x and y with markers
+pt.plot(x, 'or', label='x values')  # Red circles
+pt.plot(y, '*b', label='y values')  # Blue stars
+
+# Adding additional line plots with range values
+z = list(range(0, 15, 2))
+w = list(reversed(list(range(0, 15, 3))))  # Descending order
+
+pt.plot(z, '--', label='First Added line')  # Dashed line
+pt.plot(w, 'g^-', label='Second Added line')  # Green line with triangles
+
+# Label the axes
+pt.xlabel("X-axis")
+pt.ylabel("Y-axis")
+
+# Adding a legend and title
+pt.legend(loc='lower right')
+pt.title('Graph showing Legend')
+
+# Show the plot
+pt.show()

@@ -1,0 +1,14 @@
+#Write a python program for plotting histogram by reading .csv file using Matplotlib library. 
+
+import pandas as pd
+import matplotlib.pyplot as pt
+
+# Reading the CSV file
+df = pd.read_csv("Z:/College/Practical/FDS/FDS workspace/csv files/data.csv")
+
+# Plotting a histogram of the "Duration" column
+df["Duration"].plot(kind='hist')
+
+# Display the plot
+pt.show()
+

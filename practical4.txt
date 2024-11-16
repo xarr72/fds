@@ -1,0 +1,40 @@
+#Write a python program to write in .csv files. 
+
+import pandas as pd  	 	 	 	 	 	 	 	 
+data=pd.read_csv("Z:/College/Practical/FDS/FDS workspace/Office Records.csv") #Idhar .csv file ka path change kar bhai/behen.
+print(data) 	 	 	 	 	 	 	 	 	 	 
+
+
+#Find out the employees working in the IT department. 
+#Code: 
+#query function 	 	 	 	 
+print(data.query('Department=="IT"')) 	 	 	 	 	 	 
+
+#Find out the employees who work in the Sales department as Managers. 
+#Code: 
+#printing the data of employees who are working in the Sales Department as Managers 
+print(data.query('Department=="Sales" & Designation=="Manager"')) 	 	 
+
+#Convert both the newly created data frames into csv files. 
+#1: Employees of IT Department. 
+Code: 
+"""converting the two new data frames into csv files"""  	 	 
+#converrting the first one and saving it as Emp_IT  	 	 	 	 
+q1.to_csv("Emp_IT.csv",index=False) 
+
+#2.Employees of the Sales department who are working as Managers 
+#Code: 
+#converting the second query and saving it as Emp_Sales_Manager 	 	 
+q2.to_csv("Emp_Sales_Manager",index=False) 	
+
+#In case, if you want to store the file in some other location: 
+#Code: 
+#enter the path name  	 	 	 	 	 	 	 	 
+path="Z:/Practice/Csv test/Emp_IT2.csv" 	 	 	 	 	 	 
+#converting the query into csv file in the desired location 	 	 	 	 
+q2.to_csv(path) 	 	 	 	 	 	 	 	 	 
+
+ 	 	 	 	 
+
+	 	 	 	 	 	 
+

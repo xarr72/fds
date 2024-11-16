@@ -1,0 +1,21 @@
+#Practical 3
+#Press Ctrl+F and search for your code.
+#Save your code as .py file after copying.
+#Run with this command: python yahanfilekanaam.py
+
+
+#Write a python program to read from .csv files. 
+
+import pandas as pd 
+data=pd.read_csv("Z:/Users/Documents/Zidane/FDS/universityrecords.csv") #Idhar .csv file ka path change kar bhai/behen.
+ print(data)           
+
+#Print the first few rows In the dataset: 
+print(data.head())  
+
+#Print a particular column: 
+print(data.Branch) 
+ 
+#Use the describe() to get all the statistical measures of the data . 
+print(data.describe()) 
+ 

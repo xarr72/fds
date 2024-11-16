@@ -1,0 +1,31 @@
+#Write a python program for displaying Normal Curves. 
+
+import numpy as np
+import matplotlib.pyplot as pt
+from scipy.stats import norm
+
+# Define the range for x-axis
+x_axis = np.arange(-20, 20, 0.001)
+
+# Calculate the mean and standard deviation
+mean = np.mean(x_axis)
+sd = np.std(x_axis)
+
+# Print mean and standard deviation (optional)
+print(f"Mean: {mean}, Standard Deviation: {sd}")
+
+# Plot the normal distribution
+y_axis = norm.pdf(x_axis, mean, sd)
+pt.plot(x_axis, y_axis, label="Normal Distribution")
+
+# Add labels and legend
+pt.xlabel("X-axis")
+pt.ylabel("Probability Density")
+pt.title("Normal Distribution Curve")
+pt.legend()
+
+# Display the plot
+pt.show()
+
+ 
+

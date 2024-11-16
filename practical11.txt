@@ -1,0 +1,22 @@
+#Write a python program for displaying multiple Normal Curves. 
+ 
+import numpy as np
+import matplotlib.pyplot as pt
+from scipy.stats import norm  
+
+# Define the x range
+x = np.arange(-5, 5, 0.001)
+
+# Plot normal distributions with different standard deviations
+pt.plot(x, norm.pdf(x, 0, 1), label='mean: 0, sd: 1', color='blue', linewidth=3)
+pt.plot(x, norm.pdf(x, 0, 1.5), label='mean: 0, sd: 1.5', color='green', linewidth=3)
+pt.plot(x, norm.pdf(x, 0, 2), label='mean: 0, sd: 2', color='orange', linewidth=3)
+
+# Add legend, labels, and title
+pt.legend(title='Parameters')
+pt.ylabel('Density')
+pt.xlabel('x')
+pt.title('Normal Distributions', fontsize=14)
+
+# Display the plot
+pt.show()

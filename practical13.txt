@@ -1,0 +1,17 @@
+#Write a python program for calculating Correlation Coefficient and draw regression plot. 
+
+import pandas as pd
+import matplotlib.pyplot as pt
+import seaborn as sb
+
+# Read the CSV file
+ds = pd.read_csv("Z:/College/Practical/FDS/FDS workspace/csv files/house.csv")
+
+# Print the correlation matrix
+print(ds.corr())
+
+# Plot a regression plot for positive regression
+sb.regplot(x="Area_of_the_house", y="Price", data=ds)
+
+# Display the plot
+pt.show()

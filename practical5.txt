@@ -1,0 +1,15 @@
+#Write a python program for plotting basic plots using Matplotlib library. 
+
+#importing the required library to plot the graph import matplotlib.pyplot as pt 
+ 
+#assinging values to x and y x=[1,5,3,6,9] y=[2,3,5,4,8] 
+ 
+#plotting the x and y axes pt.plot(x,y) 
+ 
+#adding label to the x and y axes pt.xlabel('X-axis') pt.ylabel('Y-axis') 
+ 
+#adding the graph title 
+pt.title('My First Graphhhhh!') 
+ 
+#showing the graph or calling the funciton pt.show() 
+

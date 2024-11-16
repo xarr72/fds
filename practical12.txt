@@ -1,0 +1,17 @@
+#Write a python program for displaying Correlation and scatter plots 
+
+
+import pandas as pd
+import matplotlib.pyplot as pt
+
+# Read the CSV file
+df = pd.read_csv("Z:/College/Practical/FDS/FDS workspace/csv files/data.csv")
+
+# Plot a scatter plot between 'Calories' and 'Duration'
+df.plot(kind="scatter", x="Calories", y="Duration")
+
+# Print the correlation matrix
+print(df.corr())
+
+# Display the plot
+pt.show()

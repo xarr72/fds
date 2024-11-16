@@ -1,0 +1,13 @@
+#Write a python program for plotting scatter plots by reading .csv file using Matplotlib library 
+
+import pandas as pd
+import matplotlib.pyplot as pt
+
+# Reading the CSV file
+df = pd.read_csv("Z:/College/Practical/FDS/FDS workspace/csv files/house info.csv")
+
+# Plotting a scatter plot
+df.plot(kind="scatter", x="Area_of_the_house", y="Price")
+
+# Display the plot
+pt.show()
